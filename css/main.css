@@ -1554,3 +1554,41 @@ body {
   -webkit-animation-play-state: paused !important;
   animation-play-state: paused !important;
 } /*# sourceMappingURL=main.css.map */
+/* --- Name Overlay Styles (Updated) --- */
+.name-overlay {
+  position: absolute;
+  top: 5%;         /* Changed from 15% to 5% to move it higher */
+  left: 50%;
+  transform: translateX(-50%); /* Keeps it perfectly centered */
+  
+  z-index: 1000;
+  pointer-events: none;
+  
+  /* Font Styling */
+  font-family: 'Poppins', sans-serif; /* Matches your other fonts if available */
+  font-size: 3rem;   /* Large size for desktop */
+  font-weight: 900;  /* Thicker text looks better with glow */
+  color: white;
+  /* text-transform: uppercase; */
+  letter-spacing: 5px;
+  white-space: nowrap; /* Prevents the name from breaking into two lines */
+  
+  /* Glow Effect */
+  text-shadow: 
+    0 0 10px #39c6d6, 
+    0 0 20px #39c6d6, 
+    0 0 40px #39c6d6;
+    
+  opacity: 0.9;
+  width: 100%;       /* Ensures alignment container is full width */
+  text-align: center; /* Double check centering */
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+  .name-overlay {
+    font-size: 1.5rem; /* Smaller font so it fits on narrow screens */
+    top: 5%;           /* Keeps it high up on mobile too */
+    letter-spacing: 2px; /* Reduces spacing slightly for small screens */
+  }
+}
